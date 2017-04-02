@@ -1,0 +1,17 @@
+package com.tutorialspoint;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class UserDaoTest {
+	
+	UserDao userDao = new UserDao();
+	
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

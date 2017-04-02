@@ -1,0 +1,19 @@
+package UserManagementTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import com.tutorialspoint.UserService;
+
+public class UserManageTest {
+
+	private final int GET_USER_ID = 1; 
+	private final String SUCCESS_NAME = "Joe";
+	
+	UserService tester = new UserService();
+	
+	@Test
+	public void testGetUserId(){ assertEquals(SUCCESS_NAME, tester.getUser(GET_USER_ID)); }
+
+}

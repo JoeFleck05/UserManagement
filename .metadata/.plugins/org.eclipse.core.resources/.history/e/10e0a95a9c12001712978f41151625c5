@@ -1,0 +1,5 @@
+package com.fleck.jersey.jaxb;
+
+public class jaxbExampleResource {
+
+}

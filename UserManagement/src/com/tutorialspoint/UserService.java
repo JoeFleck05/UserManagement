@@ -1,7 +1,8 @@
 package com.tutorialspoint;
 
-import java.io.IOException; 
-import java.util.List;  
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
 import javax.servlet.http.HttpServletResponse; 
 import javax.ws.rs.Consumes; 
 import javax.ws.rs.DELETE; 
@@ -19,14 +20,17 @@ import javax.ws.rs.core.MediaType;
 
 public class UserService {
 	UserDao userDao = new UserDao();
+	int returnId;
 	private static final String SUCCESS_RESULT = "<result>success</result>"; 
 	private static final String FAILURE_RESULT = "<result>failure</result>";
+	
 	@GET
 	@Path("/users/{userid}")
 	@Produces(MediaType.APPLICATION_XML) 
-	public User getUser(@PathParam("userid") int userid){
+	public User getUser(@PathParam("userid") int userid) throws SQLException{
 		return userDao.getUser(userid);
 	}
+	
 	@PUT 
     @Path("/users") 
     @Produces(MediaType.APPLICATION_XML) 
@@ -42,22 +46,22 @@ public class UserService {
       } 
       return FAILURE_RESULT; 
     }  
-    @POST 
+    
+	@POST 
     @Path("/users")  
     @Produces(MediaType.APPLICATION_XML)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
-    public String updateUser(@FormParam("id") int id, 
-      @FormParam("name") String name, 
-      @FormParam("profession") String profession, 
+    public String updateUser(@FormParam("id") int id,@FormParam("name") String name, @FormParam("profession") String profession, 
       @Context HttpServletResponse servletResponse) throws IOException{ 
       User user = new User(id, name, profession); 
-      int result = userDao.updateUser(user); 
+      int result = userDao.updateUser(user);
       if(result == 1){ 
          return SUCCESS_RESULT; 
       }
       return FAILURE_RESULT; 
     }
-    @DELETE 
+    
+	@DELETE 
     @Path("/users/{userid}") 
     @Produces(MediaType.APPLICATION_XML) 
     public String deleteUser(@PathParam("userid") int userid){ 
@@ -67,7 +71,8 @@ public class UserService {
       } 
       return FAILURE_RESULT; 
     }  
-    @OPTIONS 
+    
+	@OPTIONS 
     @Path("/users") 
     @Produces(MediaType.APPLICATION_XML) 
     public String getSupportedOperations(){ 

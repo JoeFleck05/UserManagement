@@ -1,0 +1,13 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class JoeHelloWorldTest {
+
+	final private String NAME = "Fred";
+	final private String EXPECTED_RESULT = "Hello Fred";
+	
+	@Test
+	public void helloWorldTest() { assertEquals(EXPECTED_RESULT, joeHelloWorld.helloWorld(NAME)); }
+
+}

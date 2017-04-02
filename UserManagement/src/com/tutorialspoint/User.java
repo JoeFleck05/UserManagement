@@ -1,6 +1,8 @@
 package com.tutorialspoint;
 
 import java.io.Serializable;
+import java.util.Collections;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "user")
@@ -10,7 +12,10 @@ public class User implements Serializable {
 	private int id;
 	private String name;
 	private String profession;
-	public User(){}
+	
+	public User(){
+		Collections.emptyList();
+	}
 	
 	public User(int id, String name, String profession) {
 		this.id = id;
@@ -51,7 +56,7 @@ public class User implements Serializable {
             && profession.equals(user.getProfession())){ 
                return true; 
          }
-      } 
+      }
       return false; 
    }  
 }

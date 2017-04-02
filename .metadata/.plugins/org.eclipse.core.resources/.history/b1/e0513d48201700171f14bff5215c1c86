@@ -1,0 +1,13 @@
+package UserManagementTest;
+
+import com.tutorialspoint.UserService;
+
+public class UserTest {
+
+	
+	private final int GET_USER_ID = 2; 
+	private final String SUCCESS_NAME = "Joe";
+	
+	UserService tester = new UserService();
+	
+}

@@ -9,10 +9,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.*;
 
 public class UserDao {
+	
 	public List<User> getAllUsers() {
-		
 		List<User> userList = null;
 		try {
 			File file = new File("User.dat");
@@ -44,15 +45,23 @@ public class UserDao {
 		}
 		return userList;
 	}
-	public User getUser(int id){ 
-      List<User> users = getAllUsers();  
-      for(User user: users){ 
-         if(user.getId() == id){ 
-            return user; 
-         } 
-      } 
-      return null; 
-   }  
+	
+	public User getUser(int user_id) throws SQLException {
+		User userList = null;
+		String sql = "Select * from just_for_fun.users where user_id = " + user_id;
+		userList = getUserDao(sql);
+		return userList;
+	}
+	
+//	public User getUser(int id){ 
+//      List<User> users = getAllUsers();
+//      for(User user: users){ 
+//         if(user.getId() == id){ 
+//            return user; 
+//         } 
+//      }
+//      return null; 
+//   }  
    public int addUser(User pUser){ 
       List<User> userList = getAllUsers(); 
       boolean userExists = false; 
@@ -108,4 +117,21 @@ public class UserDao {
 		}
 	}
 
+	private static User getUserDao(String sql) throws SQLException {
+		User userList = null;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/just_for_fun","root","");
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			while(rs.next()){
+				userList = new User(rs.getInt(1),rs.getString(2),rs.getString(3));
+			}
+			con.close();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return userList;
+	}
 }

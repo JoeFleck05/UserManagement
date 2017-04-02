@@ -22,15 +22,15 @@ public class WebServiceTester  {
       //initialize the tester 
       tester.init();
       //test get all users Web Service Method 
-      tester.testGetAllUsers(); 
-      //test get user Web Service Method  
-      tester.testGetUser();
+//      tester.testGetAllUsers(); 
+//      //test get user Web Service Method  
+//      tester.testGetUser();
       //test update user Web Service Method 
-      tester.testUpdateUser(); 
+//      tester.testUpdateUser(); 
       //test add user Web Service Method 
-      tester.testAddUser(); 
-      //test delete user Web Service Method 
-      tester.testDeleteUser(); 
+//      tester.testAddUser(); 
+//      //test delete user Web Service Method 
+      tester.testDeleteUser();
    } 
    //Test: Get list of all users 
    //Test: Check if list is not empty 
@@ -70,12 +70,8 @@ public class WebServiceTester  {
       form.param("id", "1"); 
       form.param("name", "suresh"); 
       form.param("profession", "clerk");  
-      String callResult = client 
-         .target(REST_SERVICE_URL) 
-         .request(MediaType.APPLICATION_XML) 
-         .post(Entity.entity(form, 
-         MediaType.APPLICATION_FORM_URLENCODED_TYPE), 
-         String.class); 
+      String callResult = client.target(REST_SERVICE_URL).request(MediaType.APPLICATION_XML).post(Entity.entity(form, 
+         MediaType.APPLICATION_FORM_URLENCODED_TYPE),String.class); 
       String result = PASS; 
       if(!SUCCESS_RESULT.equals(callResult)){ 
          result = FAIL; 

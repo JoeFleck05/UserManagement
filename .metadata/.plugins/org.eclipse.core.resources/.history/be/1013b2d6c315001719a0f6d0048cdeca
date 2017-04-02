@@ -1,0 +1,28 @@
+package com.tutorialspoint;
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+public class UserDaoTest {
+	
+	UserDao userDao = new UserDao();
+	
+	
+	userList = new ArrayList<User>();
+	User user = new User(1,"Joe","Software Engineer");
+	final private int USER_ID = 1;
+	final private int EXPECTED_USER_RETURN = user.getId();
+	
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+	@Test
+	public void testSingleUserReturn() { assertEquals(EXPECTED_USER_RETURN, userDao.getUser(USER_ID)); }
+
+}
