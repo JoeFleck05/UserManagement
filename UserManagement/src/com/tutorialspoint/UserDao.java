@@ -46,9 +46,9 @@ public class UserDao {
 		return userList;
 	}
 	
-	public User getUser(int user_id) throws SQLException {
+	public User getUser(int userId) throws SQLException {
 		User userList = null;
-		String sql = "Select * from just_for_fun.users where user_id = " + user_id;
+		String sql = "Select * from just_for_fun.users where user_id = " + userId;
 		userList = getUserDao(sql);
 		return userList;
 	}
@@ -78,30 +78,54 @@ public class UserDao {
       } 
       return 0; 
    }
-   public int updateUser(User pUser){ 
-      List<User> userList = getAllUsers();  
-      for(User user: userList){ 
-         if(user.getId() == pUser.getId()){ 
-            int index = userList.indexOf(user);    
-            userList.set(index, pUser); 
-            saveUserList(userList); 
-            return 1; 
-         } 
-      }   
-      return 0; 
-   }  
-   public int deleteUser(int id){ 
-      List<User> userList = getAllUsers();  
-      for(User user: userList){ 
-         if(user.getId() == id){ 
-            int index = userList.indexOf(user);    
-            userList.remove(index); 
-            saveUserList(userList); 
-            return 1;    
-         } 
-      }   
-      return 0; 
+   public int updateUserProfession(String newProfession, int userid) throws SQLException {
+	   int userUpdated = 0;
+	   if(userid == getUser(userid).getId()) {
+		   String sql = "Update just_for_fun.users SET profession = '"+ newProfession +"' WHERE user_id = " + userid;
+		   userUpdated = updateUser(sql);
+		   return 1;
+	   } else {
+		   return 0;
+	   }
    }
+//   public int updateUser(User pUser){
+//      List<User> userList = getAllUsers();  
+//      for(User user: userList){ 
+//         if(user.getId() == pUser.getId()){ 
+//            int index = userList.indexOf(user);    
+//            userList.set(index, pUser); 
+//            saveUserList(userList); 
+//            return 1; 
+//         } 
+//      }
+//      return 0;
+//   }
+   public int updateUser(int userId) throws SQLException{
+	   
+	return 0;
+   }
+   
+   public int deleteUser(int userId) throws SQLException{
+	   if(userId == getUser(userId).getId()) {
+		   String sql = "Update just_for_fun.users SET user_status = 'DELETED', modified_on = CURRENT_TIMESTAMP where user_id = " + userId;
+		   updateUser(sql);
+		   return 1;
+	   }
+	   return 0;
+   }
+//   public int deleteUser(int id){ 
+//      List<User> userList = getAllUsers();  
+//      for(User user: userList){ 
+//         if(user.getId() == id){ 
+//            int index = userList.indexOf(user);    
+//            userList.remove(index); 
+//            saveUserList(userList); 
+//            return 1;    
+//         } 
+//      }   
+//      return 0; 
+//   }
+
 	private void saveUserList(List<User> userList) {
 		try {
 			File file = new File("Users.dat");
@@ -129,6 +153,21 @@ public class UserDao {
 			}
 			con.close();
 		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return userList;
+	}
+	
+	private static int updateUser(String sql) throws SQLException {
+		int userList = 0;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/just_for_fun","root","");
+			Statement stmt = con.createStatement();
+			int rs = stmt.executeUpdate(sql);
+			userList = 1;
+		}  catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

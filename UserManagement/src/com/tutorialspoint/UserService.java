@@ -50,21 +50,30 @@ public class UserService {
 	@POST 
     @Path("/users")  
     @Produces(MediaType.APPLICATION_XML)
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
-    public String updateUser(@FormParam("id") int id,@FormParam("name") String name, @FormParam("profession") String profession, 
-      @Context HttpServletResponse servletResponse) throws IOException{ 
-      User user = new User(id, name, profession); 
-      int result = userDao.updateUser(user);
-      if(result == 1){ 
-         return SUCCESS_RESULT; 
-      }
-      return FAILURE_RESULT; 
-    }
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	public String updateUser(@FormParam("id") int id, @FormParam("profession") String profession, 
+		      @Context HttpServletResponse servletResponse) throws IOException, SQLException{
+//		User user = new User(id, name, profession);
+		int result = userDao.updateUserProfession(profession, id);
+		if(result == 1){
+			return SUCCESS_RESULT;
+		}
+		return FAILURE_RESULT;
+	}
+//    public String updateUser(@FormParam("id") int id,@FormParam("name") String name, @FormParam("profession") String profession, 
+//      @Context HttpServletResponse servletResponse) throws IOException{ 
+//      User user = new User(id, name, profession); 
+//      int result = userDao.updateUser(user);
+//      if(result == 1){ 
+//         return SUCCESS_RESULT; 
+//      }
+//      return FAILURE_RESULT; 
+//    }
     
 	@DELETE 
     @Path("/users/{userid}") 
     @Produces(MediaType.APPLICATION_XML) 
-    public String deleteUser(@PathParam("userid") int userid){ 
+    public String deleteUser(@PathParam("userid") int userid) throws SQLException{ 
       int result = userDao.deleteUser(userid); 
       if(result == 1){ 
          return SUCCESS_RESULT; 
@@ -78,4 +87,9 @@ public class UserService {
     public String getSupportedOperations(){ 
       return "<operations>GET, PUT, POST, DELETE</operations>"; 
     }
+
+//	public Object updateUser(int parseInt, String pROFESSION, HttpServletResponse response) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 }

@@ -40,9 +40,9 @@ public class UserManagementTests {
 //	@Test
 //	public void testGetUsersReturnEmpty() throws SQLException{ assertNull(tester.getUser(EMPTY_USER_ID).getId()); }
 	@Test
-	public void testUpdateUser() throws NumberFormatException, IOException{ assertEquals(EXPECTED_RESPONSE, tester.updateUser(Integer.parseInt(UPDATE_USER), USER_NAME, PROFESSION, response)); }
+	public void testUpdateUser() throws NumberFormatException, IOException, SQLException{ assertEquals(EXPECTED_RESPONSE, tester.updateUser(Integer.parseInt(UPDATE_USER), PROFESSION, response)); }
 	@Test
-	public void testDeleteUser(){ assertEquals(EXPECTED_RESPONSE, tester.deleteUser(DELETE_USER)); }
+	public void testDeleteUser() throws SQLException{ assertEquals(EXPECTED_RESPONSE, tester.deleteUser(DELETE_USER)); }
 	@Test
 	public void testAvailableOptions() { assertEquals(AVAILABLE_OPTIONS, tester.getSupportedOperations()); }
 
