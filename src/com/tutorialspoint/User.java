@@ -12,15 +12,16 @@ public class User implements Serializable {
 	private int id;
 	private String name;
 	private String profession;
+	private String user_status;
 	
 	public User(){
 		Collections.emptyList();
 	}
 	
-	public User(int id, String name, String profession) {
-		this.id = id;
+	public User(String name, String profession, String user_status) {
 		this.name = name;
 		this.profession = profession;
+		this.user_status = user_status;
 	}
 	public int getId() {
 		return id;
@@ -43,6 +44,13 @@ public class User implements Serializable {
 	public void setProfession(String profession) {
 		this.profession = profession;
 	}
+	@XmlElement
+	public void setUserStatus(String user_status) {
+		this.user_status = user_status;
+	}
+	public String getUserStatus() {
+		return user_status;
+	}
 	@Override 
    public boolean equals(Object object){ 
       if(object == null){ 
@@ -51,9 +59,10 @@ public class User implements Serializable {
          return false; 
       }else { 
          User user = (User)object; 
-         if(id == user.getId() 
-            && name.equals(user.getName()) 
-            && profession.equals(user.getProfession())){ 
+         if(id == user.getId()
+            && name.equals(user.getName())
+            && profession.equals(user.getProfession())
+            && user_status.equals(user.getUserStatus())){ 
                return true; 
          }
       }
