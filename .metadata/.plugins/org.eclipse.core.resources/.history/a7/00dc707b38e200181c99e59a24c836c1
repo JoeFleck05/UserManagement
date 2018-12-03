@@ -1,0 +1,14 @@
+package questionOne;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class InterviewQuestionOne {
+
+	public static ArrayList<Integer> returnOrder(ArrayList al, int n) {
+		ArrayList<Integer> returnAl = new ArrayList<Integer>();
+		Collections.sort(al);
+		
+		return returnAl;
+	}
+}

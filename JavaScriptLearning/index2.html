@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+    <head>
+        <body>
+            <script type="text/javascript">
+                var girl = "Nancy";
+                function spitName(){
+                    var anotherGirl = "Julia";
+                    document.write("Global: " + girl);
+                }
+                
+                spitName();
+                document.write("GirlOne: " + anotherGirl);
+                // comment
+                var whatILike = 'bicycles';
+                var numOne = -12;
+                var numTwo = 11;
+                document.write(numOne + numTwo);
+//                function funky() {
+//                    alert("JOE");
+//                }
+                function addNums(numOne, numTwo) {
+                    var newNum;
+                    newNum = numOne + numTwo;
+                    document.getElementById('numbersAdded').innerHTML=newNum;
+                }
+//                function meatball(x) {
+//                    document.write("I love " + x + "<br />");
+//                }
+                // document.write("hey now brown cow!");
+//                document.write("I love " + whatILike);
+            </script>
+            
+            <form>
+                <input type="button" value="Add" onclick="addNums(1,2)">
+                <div>The sum is: <label id="numbersAdded"></label></div>
+                
+            </form>
+        </body>
+    </head>
+</html>

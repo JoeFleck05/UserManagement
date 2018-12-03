@@ -1,7 +1,0 @@
-package com.tutorialspoint;
-
-import java.sql.*;
-
-public class UserDao {
-
-}

@@ -1,0 +1,24 @@
+package exerciseTwoTest;
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+public class ExerciseTwoTest {
+
+	ExerciseTwoTest exerciseTwoTest = new ExerciseTwoTest();
+	
+	private static String[] ARRAY_OF_WORDS = {"Get","Her","Her","Though","Though","Though"};
+	
+	@Test
+	public void validate() {
+		ArrayList<String> returnArrayOfWords = new ArrayList<String>();
+		returnArrayOfWords.add("Though <> 3");
+		returnArrayOfWords.add("Her <> 2");
+		returnArrayOfWords.add("Get <> 1");
+		
+		
+	}
+}

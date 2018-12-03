@@ -1,0 +1,34 @@
+package InterviewQuestionOneTest;
+
+import java.util.ArrayList;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import questionOne.InterviewQuestionOne;
+
+public class AllTests {
+	
+	private int NUMBER_TO_RETURN = 3;
+	
+	@Test
+	public void validate() {
+		ArrayList<Integer> ACTUAL_LIST = new ArrayList<Integer>();
+		ACTUAL_LIST.add(909);
+		ACTUAL_LIST.add(132);
+		ACTUAL_LIST.add(22);
+		ACTUAL_LIST.add(756);
+		
+		ArrayList<Integer> EXPECTED_LIST = new ArrayList<Integer>();
+		EXPECTED_LIST.add(909);
+		EXPECTED_LIST.add(756);
+		EXPECTED_LIST.add(132);
+		EXPECTED_LIST.add(22);
+		
+		InterviewQuestionOne interviewQuestionOne = new InterviewQuestionOne();
+		
+		Assert.assertNotSame(EXPECTED_LIST, interviewQuestionOne.returnOrder(ACTUAL_LIST, NUMBER_TO_RETURN));
+		
+	}
+
+}

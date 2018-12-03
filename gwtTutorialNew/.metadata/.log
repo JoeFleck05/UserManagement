@@ -1,0 +1,26 @@
+!SESSION 2017-05-08 13:46:47.036 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -keyring /Users/josephfleck/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -data /Users/josephfleck/Documents/workspace/gwtTutorialNew -product org.eclipse.epp.package.jee.product -keyring /Users/josephfleck/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-05-08 13:46:51.932
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2017-05-08 13:54:55.678 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -keyring /Users/josephfleck/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data file:/Users/josephfleck/Documents/workspace/gwtTutorialNew/ -product org.eclipse.epp.package.jee.product -keyring /Users/josephfleck/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-05-08 13:55:10.302
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.gwtplugins.gdt.eclipse.suite 1 0 2017-05-08 13:55:36.533
+!MESSAGE Registering: com.gwtplugins.gwt.eclipse.sdkbundle.gwt27_2.7.0.201703272136
+
+!ENTRY com.gwtplugins.gdt.eclipse.suite 1 0 2017-05-08 13:55:36.903
+!MESSAGE Registering: com.gwtplugins.gwt.eclipse.sdkbundle.gwt28_2.8.0.201703272136

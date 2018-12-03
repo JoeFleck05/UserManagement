@@ -1,0 +1,19 @@
+package exerciseTwoTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ExerciseTwoTest {
+
+	ExerciseTwoTest exerciseTwoTest = new ExerciseTwoTest();
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void validate() {
+		
+	}
+}

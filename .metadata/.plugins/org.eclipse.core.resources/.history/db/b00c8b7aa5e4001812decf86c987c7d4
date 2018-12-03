@@ -1,0 +1,19 @@
+package exerciseTwoTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ExerciseTwoTwoTest {
+
+	ExecriseTwoTwo execriseTwoTwo = new ExecriseTwoTwo();
+
+    private String[] ARRAY_OF_NAMES = {"joe","joe","joe","joe","jared","jared","jared","nathan","julia","julia","julia","nancy","nathan","julia","julia","nancy","jared","jared","jared","jared","jared","jared","jared"};
+    private String[] PROVE_IT_ARRAY_OF_NAMES = {"joe","joe","joe","jared","jared","nathan"};
+    private String[] PROVE_RETURN_ARRAY = {"joe<>3","jared<>2","nathan<>1"};
+
+
+    @Test
+    public void proveIt(){ assertArrayEquals(PROVE_RETURN_ARRAY, exercise2_1.Execrise2_1(PROVE_IT_ARRAY_OF_NAMES)); }
+
+}

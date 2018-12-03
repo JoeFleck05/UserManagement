@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ExerciseTwoTest" project="Interview" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="exerciseTwoTest.ExerciseTwoTest" time="0.0">
+    <testcase name="validate" classname="exerciseTwoTest.ExerciseTwoTest" time="0.0"/>
+    <testcase name="validateAgain" classname="exerciseTwoTest.ExerciseTwoTest" time="0.0"/>
+  </testsuite>
+</testrun>

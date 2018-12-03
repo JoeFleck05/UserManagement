@@ -1,0 +1,29 @@
+package InterviewQuestionOneTest;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+
+import questionOne.InterviewQuestionOne;
+
+@RunWith(Suite.class)
+@SuiteClasses({})
+public class AllTests {
+	
+	
+	ArrayList<Integer> EXPECTED_LIST = new ArrayList<Integer>();
+	
+	@Test
+	public void validate() {
+		ArrayList<Integer> ACTUAL_LIST = new ArrayList<Integer>();
+		ACTUAL_LIST.add(909);
+		ACTUAL_LIST.add(232);
+		ACTUAL_LIST.add(22);
+		InterviewQuestionOne interviewQuestionOne = new InterviewQuestionOne();
+		
+	}
+
+}

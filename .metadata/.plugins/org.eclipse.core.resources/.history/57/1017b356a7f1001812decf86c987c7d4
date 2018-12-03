@@ -1,0 +1,20 @@
+package javaQuickSortExample;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class QuickSortTest {
+	
+	private int[] numbers;
+	private final static int SIZE = 7;
+	private final static int MAX = 20;
+	
+	
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

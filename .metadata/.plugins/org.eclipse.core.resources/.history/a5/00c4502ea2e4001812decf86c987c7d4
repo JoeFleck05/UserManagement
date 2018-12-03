@@ -1,0 +1,12 @@
+package questionTwo;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ExerciseTwo {
+	
+	public ArrayList<String> getCountOfNames(String[] names) {
+		List<String> nameList = new ArrayList<>(Arrays.asList(names));
+	}
+
+}

@@ -3,13 +3,15 @@
 	<item value="true" key="J2EE_EXPORT_OVERWRITE"/>
 	<item value="false" key="J2EE_EXPORT_SOURCE"/>
 	<list key="MRU_RUNTIME_STORE">
+		<item value="Apache Tomcat v9.0"/>
 		<item value="NULL_RUNTIME"/>
 	</list>
 	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="/Users/josephfleck/Desktop/Tomcat/webapps/com.jfleck.web.filecounter.war"/>
+		<item value="/Users/josephfleck/Desktop/Tomcat/webapps/UserManagement.war"/>
+		<item value="/Users/josephfleck/Desktop/Tomcat/webapps/UserManage.war"/>
+		<item value="/Users/josephfleck/Desktop/Tomcat/webapps/UserManagementTwo.war"/>
 		<item value="/Users/josephfleck/Desktop/Tomcat/webapps/com.fleck.jersey.jaxb.war"/>
 		<item value="/Users/josephfleck/Desktop/Tomcat/com.fleck.jersey.jaxb.war"/>
-		<item value="/Users/josephfleck/Desktop/Tomcat/com.fleck.jersey.first.war"/>
-		<item value="/Users/josephfleck/Desktop/Tomcat/webapps/com.fleck.jersey.first.war"/>
-		<item value="/Users/josephfleck/Desktop/Tomcat/webapps/UserManagement.war"/>
 	</list>
 </section>

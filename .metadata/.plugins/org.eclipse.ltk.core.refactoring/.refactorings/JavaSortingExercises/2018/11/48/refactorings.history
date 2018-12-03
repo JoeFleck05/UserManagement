@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;javaQuickSortExample.quickSort&apos; to &apos;QuickSort&apos;&#x0A;- Original project: &apos;JavaSortingExercises&apos;&#x0A;- Original element: &apos;javaQuickSortExample.quickSort&apos;&#x0A;- Renamed element: &apos;javaQuickSortExample.QuickSort&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;quickSort&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;javaQuickSortExample{quickSort.java[quickSort" matchStrategy="1" name="QuickSort" qualified="false" references="true" similarDeclarations="false" stamp="1543254093608" textual="false" version="1.0"/>
+</session>

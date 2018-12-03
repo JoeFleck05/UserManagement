@@ -1,0 +1,35 @@
+/*
+Exercise Two:
+A = [ brad, mark, jerry, steve, zack, kate, brad ... steve ]
+
+How would you produce a list of names and the number of occurrences of the name in the array?
+
+The list should be ordered by the number of occurrences.
+
+Example answer :
+brad    1242
+steve    999
+zack    21
+kate    10
+mark    9
+...
+jerry    1
+*/
+package questionTwo;
+
+import java.util.Map;
+
+public class InterviewQuestionTwo {
+
+	public String[] exerciseTwo() {
+		
+		// Return String Array
+		
+		// Sort incoming array of names
+		
+		// Create Map
+		Map<String, Integer> freqMap = new HashMap<String, Integer>();
+		
+		return null;		
+	}
+}
